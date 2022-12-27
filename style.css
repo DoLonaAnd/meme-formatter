@@ -1,8 +1,22 @@
 html {
     font-size: 20px;
+    background-image: url(./images/background.gif);
+    background-position: center top;
 }
 
 h1 {
+    margin: 0.5em;
+    font-family: SERIF;
+}
+
+
+/*
+h1:hover {
+    color: rebeccapurple;
+}*/
+
+h2 {
+    font-size: 1.5em;
     margin: 0.5em;
     font-family: SERIF;
 }
@@ -16,8 +30,18 @@ input {
     border-radius: 1em;
 }
 
-h1:hover {
-    color: rebeccapurple;
+p {
+    margin: 0.5em;
+    font-family: serif;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    width: 10em;
+    align-content: center;
 }
 
 #buttonSplitting {
@@ -31,9 +55,14 @@ h1:hover {
     color: white;
 }
 
-#buttonSplitting: hover {
+#buttonSplitting:hover {
     background-color: white;
     color: red;
+}
+
+#info {
+    margin: -8.0px;
+    background-color: #EEEEEE;
 }
 
 .divs1 {
@@ -44,4 +73,8 @@ h1:hover {
 
 .langButton {
     height: 25px;
+}
+
+.aa {
+    color: transparent;
 }
