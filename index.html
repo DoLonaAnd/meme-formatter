@@ -1,16 +1,35 @@
 <!doctype html>
-<html>
+<html id="html1" lang="en">
 
 <head>
-    <meta charset = "UTF-8">
+    <meta charset="UTF-8">
     <title>meme Formatter</title>
-    <link rel = "stylesheet" href = "">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./images/favicon-c.gif">
+    <link rel="apple-touch-icon" href="./images/favicon-c.gif">
 </head>
 
 <body>
-    <div>
-        <h1>meme Formatter</h1>
+    <div id="buttons">
+        <button onclick="setLang(`en`)" class="langButton">English</button>
+        <button onclick="setLang(`ja`)" class="langButton">日本語</button>
     </div>
+    <div class="divs1">
+        <h1>meme Formatter</h1>
+        <div class="divs1">
+            <input id="input1" size="20em" height="5em" placeholder=""><br>
+            <input id="input2" size="20em" height="5em" placeholder=""><br>
+            <button id="buttonSplitting" onclick="splitting()"></button><br>
+            <input id="output1" size="20em" height="5em" placeholder="">
+
+        </div>
+    </div>
+    <hr>
+    <div id="info">
+
+    </div>
+    <script src="script.js">
+    </script>
 </body>
 
 </html>
