@@ -13,7 +13,9 @@
     <div id="buttons">
         <button onclick="setLang(`en`)" class="langButton">English</button>
         <button onclick="setLang(`ja`)" class="langButton">日本語</button>
+        <button onclick="reset()" class="langButton" id="reset"></button>
     </div>
+    <br>
     <div class="divs1">
         <h1>meme Formatter</h1>
         <div class="divs1">
@@ -29,11 +31,21 @@
                 <p id="usage"></p>
             </div>
         </div>
-
+        <div class="divs1" id="exdiv">
+            <h2 id="ex"></h2>
+            <table id="exT" border=1 style="border-color:black; margin-bottom:0em; min-width:0px;" class="divs1">
+                <thead id="th">
+                </thead>
+                <tfoot id="tf">
+                </tfoot>
+            </table>
+            <br>
+        </div>
+        <br>
     </div>
     <hr>
     <div id="info">
-        <table border=1 style="border-color:black;">
+        <table id="infoT" border=1 style="border-color:black;">
             <tfoot>
                 <td>
                     <a href="https://twitter.com/Android_g_o_d" target="_blank">Twitter</a>
@@ -44,6 +56,7 @@
             </tfoot>
         </table>
     </div>
+    <a href="#html1" id="totop"></a>
     <script src="script.js">
     </script>
 </body>

@@ -15,6 +15,7 @@ body {
 h1 {
     margin: 0.5em;
     font-family: SERIF;
+    text-align: center;
 }
 
 
@@ -44,13 +45,21 @@ p {
     font-family: serif;
 }
 
-table {
-    width: 100%;
+thead {
+    width: 80%;
+}
+
+th {
+    max-width: 3.5em;
 }
 
 td {
     width: 10em;
     align-content: center;
+}
+
+script {
+    display: none;
 }
 
 #buttonSplitting {
@@ -70,15 +79,58 @@ td {
     color: red;
 }
 
+#exT {}
+
 #info {
     margin: -8.0px;
-    background-color: #EEEEEE;
+    position: fixed;
+    bottom: 0px;
+    left: 7.5px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #FFFFFF;
+    transition: 0.3s0;
+    width: 100%;
+}
+
+#infoT {
+    width: 100%;
+}
+
+#buttons {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+    padding: 0.7em;
+    text-align: center;
+    background-color: #FFFFFFAA;
+    transition: 0.3s0;
+    border-radius: 1em;
+}
+
+#totop {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    font-weight: bold;
+    padding: 0.7em;
+    text-align: center;
+    background-color: #FFFFFFAA;
+    transition: 0.3s0;
+    border-radius: 1em;
 }
 
 .divs1 {
+    word-break: break-all;
     margin: 2.5em;
     background-color: #9999FF88;
     border-radius: 1.0em;
+}
+
+.exdiv>table {
+    width: 100%;
+    box-sizing: border-box
 }
 
 .langButton {
@@ -87,4 +139,9 @@ td {
 
 .aa {
     color: transparent;
+}
+
+.radT {
+    border-radius: 1em;
+    text-align: center;
 }

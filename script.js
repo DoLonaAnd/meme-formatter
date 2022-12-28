@@ -36,7 +36,7 @@ const words_list = [
         ]
     ],
     [
-        ["buttonSplitting", "usageH", "usage"],
+        ["buttonSplitting", "usageH", "usage", "ex", "th", "tf", "reset", "totop"],
         [
             [
                 "Splitting",
@@ -49,6 +49,26 @@ const words_list = [
             [
                 "Enter the title you want to enter in the input box \"Title you want to split\".<br>Enter the characters to use for splitting in the input box \"Characters for splitting\".<br>When you press the \"Splitting\" button, <br>the result will be displayed in the output box \"Splitted title\".",
                 "入力ボックス『分割したいタイトル』に分割したいタイトルを入力します。<br>入力ボックス『分割に使う文字』を入力します。<br>『分割する』ボタンを押すと、出力ボックス『分割したタイトル』に<br>分割したタイトルが表示されます。"
+            ],
+            [
+                "Example",
+                "例"
+            ],
+            [
+                "<tr><th class = \"radT\">Before</th><th class = \"radT\">char</th><th class = \"radT\">After</th></tr>",
+                "<tr><th class = \"radT\">元のタイトル</th><th class = \"radT\">分割に使う文字</th><th class = \"radT\">分割後のタイトル</th></tr>"
+            ],
+            [
+                "<tr><td class = \"radT\">12345</td><td class = \"radT\">/</td><td class = \"radT\">1/2/3/4/5</td></tr><tr><td class = \"radT\">Github love</td><td class = \"radT\">:</td><td class = \"radT\">G:i:t:h:u:b l:o:v:e</td></tr>",
+                "<tr><td class = \"radT\">12345</td><td class = \"radT\">/</td><td class = \"radT\">1/2/3/4/5</td></tr><tr><td class = \"radT\">Github love</td><td class = \"radT\">:</td><td class = \"radT\">G:i:t:h:u:b l:o:v:e</td></tr>"
+            ],
+            [
+                "Reset",
+                "リセット"
+            ],
+            [
+                "To top",
+                "トップに戻る"
             ]
         ]
     ],
@@ -111,22 +131,31 @@ function setLang(lang) {
     }
 }
 
+function splitting() {
+    let title = document.getElementById("input1").value,
+        character = document.getElementById("input2").value,
+        characters = Array.from(title),
+        ret = "";
+    for (let i = 0; i < characters.length; i++) {
+        ret += characters[i];
+        console.log(ret);
+        if (i != characters.length - 1 && (characters[i + 1] != " " && characters[i + 1] != "　" && characters[i + 1] != "\n") && (characters[i] != " " && characters[i] != "　" && characters[i] != "\n")) {
+            ret += character;
+        }
+    }
+    document.getElementById("output1").value = ret;
+}
+
+function reset() {
+    document.getElementById("input1").value = "";
+    document.getElementById("input2").value = "";
+    document.getElementById("output1").value = "";
+}
+
+
 
 // 起動時
 window.onload = function() {
-    /*if (window.name != "memeFormatter") {
-        let len = function() {
-            window.history.length = 1;
-        }
-        window.open(location.href, "memeFormatter", "width = 1280, height = 720, resizable = 1");
-        window.close();
-    } else {*/
-    setLang("en");
-    //}
-}
-
-// ウィンドウサイズ変更
-window.onresize = function() {
     let width = window.innerWidth,
         height = window.innerHeight,
         aspect_h = width * 9 / 16;
@@ -136,11 +165,17 @@ window.onresize = function() {
     } else {
         document.getElementById("html1").style.backgroundSize = "100%";
     }
+    setLang("en");
+}
 
-    /*if (window.innerWidth > 1920) {
-        window.resizeBy(1920, window.innerHeight);
+// ウィンドウサイズ変更
+window.onresize = function() {
+    let width = window.innerWidth,
+        height = window.innerHeight,
+        aspect_h = width * 9 / 16;
+    if (aspect_h < height) {
+        document.getElementById("html1").style.backgroundSize = (100 * height / aspect_h) + 4 + "%";
+    } else {
+        document.getElementById("html1").style.backgroundSize = "100%";
     }
-    if (window.innerHeight > 1080) {
-        window.resizeBy(window.innerWidth, 1080);
-    }*/
 };
