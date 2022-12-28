@@ -2,6 +2,14 @@ html {
     font-size: 20px;
     background-image: url(./images/background.gif);
     background-position: center top;
+    max-height: 1080px;
+    background-size: 120%;
+    background-attachment: fixed
+}
+
+body {
+    height: 95%;
+    width: 95%;
 }
 
 h1 {
@@ -24,7 +32,8 @@ h2 {
 input {
     font-size: 20px;
     margin: 0.5em;
-    width: 20em;
+    width: 80%;
+    max-width: 20em;
     height: 3em;
     text-align: start;
     border-radius: 1em;
@@ -47,8 +56,9 @@ td {
 #buttonSplitting {
     font-size: 20px;
     margin: 0.5em;
-    width: 20.4em;
-    height: 3.3em;
+    width: 82.5%;
+    max-width: 20.4em;
+    height: 3.3603125em;
     text-align: start;
     border-radius: 1em;
     background-color: gray;

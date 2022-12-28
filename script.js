@@ -114,5 +114,33 @@ function setLang(lang) {
 
 // 起動時
 window.onload = function() {
+    /*if (window.name != "memeFormatter") {
+        let len = function() {
+            window.history.length = 1;
+        }
+        window.open(location.href, "memeFormatter", "width = 1280, height = 720, resizable = 1");
+        window.close();
+    } else {*/
     setLang("en");
+    //}
 }
+
+// ウィンドウサイズ変更
+window.onresize = function() {
+    let width = window.innerWidth,
+        height = window.innerHeight,
+        aspect_h = width * 9 / 16;
+    //console.log("Window size " + width + ":" + height);
+    if (aspect_h < height) {
+        document.getElementById("html1").style.backgroundSize = (100 * height / aspect_h) + 4 + "%";
+    } else {
+        document.getElementById("html1").style.backgroundSize = "100%";
+    }
+
+    /*if (window.innerWidth > 1920) {
+        window.resizeBy(1920, window.innerHeight);
+    }
+    if (window.innerHeight > 1080) {
+        window.resizeBy(window.innerWidth, 1080);
+    }*/
+};
